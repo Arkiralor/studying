@@ -16,7 +16,7 @@ Here is a general outline of how you can define DAGs within a Django application
     `python manage.py migrate`
 
 
-3. Define DAGs: Within your Django application, create a `dags.py` module where you define your DAGs. In this module, import the necessary modules from Django-Airflow and define your DAGs using the provided decorators and functions.
+3. Define DAGs: Within your Django application, create a `dags.py` module where you define your DAGs. In this module, import the necessary modules from `Django-Airflow` and define your DAGs using the provided decorators and functions.
 
 ```py
 from airflow import DAG
@@ -39,7 +39,7 @@ def my_dag():
 dag = my_dag()
 ```
 
-4. Register the DAGs: In your Django application's apps.py module, override the `ready()` method and register your DAGs using the airflow.api.dagbag object.
+4. Register the DAGs: In your Django application's apps.py module, override the `ready()` method and register your DAGs using the `airflow.api.dagbag` object.
 
 ```py
 from django.apps import AppConfig
@@ -71,4 +71,4 @@ class YourAppConfig(AppConfig):
 - This command will start the Airflow webserver, which you can access to manage and monitor your DAGs.
 
 
-By following these steps, you can define and manage your DAGs within your Django application using Django-Airflow. The Django-Airflow package provides the necessary integration between Django and Airflow, allowing you to leverage Django's features and database while working with Airflow.
+By following these steps, we can define and manage your DAGs within your Django application using Django-Airflow. The Django-Airflow package provides the necessary integration between Django and Airflow, allowing us to leverage Django's features and database while working with Airflow.
